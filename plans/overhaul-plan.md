@@ -6,6 +6,8 @@ Gameplay/balance overhaul for Rise of Nations: Extended Edition targeting slower
 **Created:** 2026-06-07
 **Updated:** 2026-06-07
 
+> Items 1–3 and 8 are implemented and deployed but **await in-game verification** — their checkboxes stay open until a test game confirms them.
+
 ---
 
 ## Context
@@ -46,18 +48,18 @@ game loads mod file INSTEAD of Data\<file>.xml
 ### Tier 1 — High Impact
 
 1. **Age pacing** — scale the 7 Age techs' `COST` and `JOB_TIME` in `techrules.xml` (~2× cost, ~2× research time as starting point)
-   - [ ] Copy `techrules.xml` from vanilla into mod
-   - [ ] Scale Age tech costs and JOB_TIME
+   - [x] Copy `techrules.xml` from vanilla into mod
+   - [x] Scale Age tech costs and JOB_TIME (all 7 ages, 2× both)
    - [ ] In-game verification: Classical Age arrives noticeably later in a test game
 
-2. **Population caps** — raise `POP_CAP` table entries and `MAX_POP_LIMIT` in `rules.xml` (e.g., setup choices up to 400, hard cap 999)
-   - [ ] Copy `rules.xml` from vanilla into mod
-   - [ ] Raise POP_CAP entries + MAX_POP_LIMIT
+2. **Population caps** — raise `POP_CAP` table entries and `MAX_POP_LIMIT` in `rules.xml` (setup choices 50–400, hard cap 999)
+   - [x] Copy `rules.xml` from vanilla into mod
+   - [x] Raise POP_CAP entries + MAX_POP_LIMIT
    - [ ] Verify setup screen shows new choices and units build past 200
 
 3. **Mod skeleton + deploy pipeline** — `info.xml`, `tools/deploy.ps1`, first successful in-game load of the mod
-   - [ ] info.xml with name/description
-   - [ ] deploy.ps1 copies mod → game mods folder
+   - [x] info.xml with name/description
+   - [x] deploy.ps1 copies mod → game mods folder
    - [ ] Mod appears and enables in Main Menu → Mods
 
 ### Tier 2 — Medium Impact
@@ -79,7 +81,7 @@ game loads mod file INSTEAD of Data\<file>.xml
 ### Tier 1 — High Impact
 
 8. **Borderless windowed mode** — `rise2.ini`: `Fullscreen=0` with `Windowed Width/Height` = desktop resolution; keep `IgnoreMinimizeOnTabOut=1`
-   - [ ] tools/borderless.ps1 toggle script with backup
+   - [x] tools/borderless.ps1 toggle script with backup (applied 2026-06-07, backup at rise2.ini.bak)
    - [ ] Verify: game fills screen, second monitor/window usable without minimize
    - [ ] If a title bar appears at full res, investigate EE windowed-borderless behavior / fallback options
 
