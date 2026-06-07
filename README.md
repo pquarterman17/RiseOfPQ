@@ -64,9 +64,16 @@ The auto-train feature uses RoN:EE's standalone script system (BHS language) —
 mod/Rise of PQ/        # the mod payload (deployed to <game>\mods\)
 scripts/               # standalone .bhs scripts (deployed to <game>\scenario\Scripts\)
 tools/                 # deploy / snapshot / borderless PowerShell scripts
+docs/                  # modding reference, scripting guide, design notes
 plans/                 # development plan
 vanilla/               # local-only baseline of game files (git-ignored)
 ```
+
+## Documentation
+
+- **[Modding reference](docs/modding-reference.md)** — how RoN:EE's mod system actually works (verified against the install): the three config layers, whole-file overrides, key Data XML files, units of measure, surviving game updates
+- **[BHS scripting guide](docs/bhs-scripting.md)** — the standalone script system: language shape, the repeating-trigger idiom, the 626-function catalog, why `train_unit("Hoplites")` works in every age, Auto Citizen levels
+- **[Design notes](docs/design-notes.md)** — why every value is what it is, which knob to turn when a playtest disagrees, and the playtest checklist
 
 ## License
 

@@ -25,8 +25,11 @@ vanilla/               # pristine copies of every base file we override — NEVE
 tools/deploy.ps1       # copy mod/ + scripts/ into the game install (run after every change)
 tools/snapshot-vanilla.ps1  # rebuild vanilla/ from the local game install
 tools/borderless.ps1   # toggle borderless-windowed mode in rise2.ini
+docs/                  # modding-reference.md, bhs-scripting.md, design-notes.md
 plans/                 # tiered plan documents
 ```
+
+Deep documentation lives in `docs/` — consult `modding-reference.md` for file formats and units of measure, `bhs-scripting.md` for the standalone script system, and `design-notes.md` for tuning rationale before changing any shipped value.
 
 ## How RoN:EE modding works
 
