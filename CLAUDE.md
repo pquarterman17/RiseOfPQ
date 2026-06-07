@@ -20,8 +20,10 @@ mod/Rise of PQ/        # the mod payload — deployed verbatim to <game>\mods\Ri
   info.xml             # mod manifest (name, description, FILES list)
   data/                # whole-file overrides of <game>\Data\*.xml
 scripts/               # standalone .bhs scripts — deployed to <game>\scenario\Scripts\
-vanilla/               # pristine copies of every base file we override — NEVER edit
+vanilla/               # pristine copies of every base file we override — NEVER edit.
+                       #   git-ignored (copyrighted); regenerate with tools/snapshot-vanilla.ps1
 tools/deploy.ps1       # copy mod/ + scripts/ into the game install (run after every change)
+tools/snapshot-vanilla.ps1  # rebuild vanilla/ from the local game install
 tools/borderless.ps1   # toggle borderless-windowed mode in rise2.ini
 plans/                 # tiered plan documents
 ```

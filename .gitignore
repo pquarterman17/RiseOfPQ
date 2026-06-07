@@ -1,3 +1,6 @@
-# nothing build-generated yet; deploy copies out of the repo, not into it
+# Pristine game files — copyrighted, not redistributed. Regenerate with
+# tools\snapshot-vanilla.ps1 from your own game install.
+vanilla/
+
 Thumbs.db
 desktop.ini
