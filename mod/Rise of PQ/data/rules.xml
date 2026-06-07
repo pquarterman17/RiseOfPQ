@@ -113,7 +113,7 @@
     <ACCEL_RESEARCH value="1/1 speed  (Please don't use except on your own machine for testing; for main line game adjust times individually -- BR)"/>
     <STARTING_GOODS entry0="200food&#xA;" entry1="200timb" entry2="100gd" entry3="100know" entry4="100met" entry5="100oil"/>
     <BASIC_GATHER entry0="0food" entry1="0timb&#xA;" entry2="0gd" entry3="0know" entry4="0met" entry5="0oil"/>
-    <CITY_GATHER entry0="10food" entry1="10timb&#xA;" entry2="0gd" entry3="0know" entry4="0met" entry5="0oil"/>
+    <CITY_GATHER entry0="20food" entry1="20timb&#xA;" entry2="0gd" entry3="0know" entry4="0met" entry5="0oil"/>
     <GATHER_RATE value="450 frames"/>
     <PEASANT_RATE value="10 resources"/>
     <SCHOLAR_RATE entry0="5" entry1="7" entry2="10" entry3="15" entry4="20" entry5="25"/>
@@ -175,7 +175,7 @@
     <COMMANDO_MIN_DAMAGE value="200"/>
     <SPECIAL_MIN_DAMAGE value="400"/>
     <ELITE_MIN_DAMAGE value="800"/>
-    <COMMERCE_CAP entry0="70" entry1="100" entry2="150" entry3="200" entry4="260" entry5="320" entry6="400" entry7="500 commerce cap"/>
+    <COMMERCE_CAP entry0="140" entry1="200" entry2="300" entry3="400" entry4="520" entry5="640" entry6="800" entry7="1000 commerce cap"/>
     <LUMBER_COMMERCE value="10 commerce cap"/>
     <GLOBAL_PROSPERITY value="25%"/>
     <PYRAMIDS_COMMERCE value="50 commerce cap"/>

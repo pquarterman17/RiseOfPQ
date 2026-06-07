@@ -19,8 +19,9 @@ Rise of PQ — a gameplay/balance overhaul mod for **Rise of Nations: Extended E
 mod/Rise of PQ/        # the mod payload — deployed verbatim to <game>\mods\Rise of PQ
   info.xml             # mod manifest (name, description, FILES list)
   data/                # whole-file overrides of <game>\Data\*.xml
+scripts/               # standalone .bhs scripts — deployed to <game>\scenario\Scripts\
 vanilla/               # pristine copies of every base file we override — NEVER edit
-tools/deploy.ps1       # copy mod/ -> game mods folder (run after every change)
+tools/deploy.ps1       # copy mod/ + scripts/ into the game install (run after every change)
 tools/borderless.ps1   # toggle borderless-windowed mode in rise2.ini
 plans/                 # tiered plan documents
 ```
@@ -53,6 +54,15 @@ Unit `OBJ_MASK`/`FLAGS` letter codes are documented in the comment block at the 
 3. Deploy: `powershell -File tools\deploy.ps1`
 4. Launch RoN:EE, enable "Rise of PQ" in Main Menu → Mods, start a quick battle to verify.
 5. Commit on a feature branch per global rules.
+
+## Standalone scripts (BHS)
+
+RoN:EE loads scripts from `<game>\scenario\Scripts\<Name>\<name>.bhs`, selectable in the game-setup screen (alongside the shipped "Auto Pause" and "No Nukes"). Format: C-like, one `scenario { }` block with `static` vars, `run_once { }`, and `trigger Name(condition) { }` blocks.
+
+- Triggers fire ONCE; re-arm with `enable_trigger("Name")` inside the body (repeating-timer idiom: `set_timer` + `enable_trigger`, see `scenario\Custom\italy_mp\italy_mp.bhs`).
+- `train_unit(who, num, "Type")` resolves the type through `current_upgrade()` + `get_graft()` — Ancient-age line names ("Hoplites") stay valid in every age and for nation-unique variants. Source: `<game>\obsoletescriptfuncs.txt` lines 547–589.
+- Function catalog: `Data\scriptfunctions.xml` (626 funcs, one line — parse with regex). Unit names = `<NAME>` values in `unitrules.xml` (case-insensitive).
+- `get_console_player()` = the human player number.
 
 ## Constraints
 

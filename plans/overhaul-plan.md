@@ -6,7 +6,7 @@ Gameplay/balance overhaul for Rise of Nations: Extended Edition targeting slower
 **Created:** 2026-06-07
 **Updated:** 2026-06-07
 
-> Items 1–3 and 8 are implemented and deployed but **await in-game verification** — their checkboxes stay open until a test game confirms them.
+> Items 1–3, 8, 11, and 12 are implemented and deployed but **await in-game verification** — their checkboxes stay open until a test game confirms them.
 
 ---
 
@@ -65,6 +65,17 @@ game loads mod file INSTEAD of Data\<file>.xml
 ### Tier 2 — Medium Impact
 
 4. **Library tech pacing** — scale non-Age Library techs (Military/Civic/Commerce/Science lines) in `techrules.xml`/`balance.xml` so the tech tree stretches with the ages
+
+11. **Resource production boost** — double `COMMERCE_CAP` per-age income ceilings (70–500 → 140–1000) and `CITY_GATHER` base city income (10/10 → 20/20) in `rules.xml`
+   - [x] COMMERCE_CAP doubled
+   - [x] CITY_GATHER doubled
+   - [ ] In-game verification: income caps show doubled values in economy tooltip
+
+12. **Auto-train standalone script** — `scripts/Auto_Train/auto_train.bhs`: periodic `train_unit` for citizens (idle-gated), scholars, optional military lines; deployed to `scenario\Scripts\`
+   - [x] Script written using shipped Auto_Pause/No_Nukes as template
+   - [x] deploy.ps1 extended to install standalone scripts
+   - [ ] In-game verification: select script in game setup, confirm citizens auto-queue and messages print
+   - [ ] Tune defaults (interval, batch) after first playtest
 
 5. **Late-game unit economy** — raise `COST`/`SUPPORT` ramps for Industrial+ units in `unitrules.xml` so late armies are investments, not spam
 
