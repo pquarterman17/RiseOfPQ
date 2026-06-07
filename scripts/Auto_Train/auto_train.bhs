@@ -17,6 +17,14 @@ scenario {
   // Seconds between production checks
   static int interval = 15;
 
+  // -- Auto Citizen level: forces the engine's built-in citizen
+  //    automation each game (same as Options -> "Auto Citizen").
+  //    Idle citizens automatically gather, join construction, and
+  //    repair damaged buildings.
+  //      0 = Gather   1 = Build and Gather   2 = Build   3 = Idle (off)
+  //    Set to -1 to leave your profile's option untouched.
+  static int auto_citizen_level = 1;
+
   // -- Citizens: queue more only while you have fewer than this many
   //    idle (i.e. everyone is employed). 0 disables citizen training.
   static int citizen_idle_threshold = 1;
@@ -37,6 +45,10 @@ scenario {
   run_once {
     set_timer("PQ_AUTOTRAIN", interval);
     print_game_msg("Rise of PQ Auto-Train enabled (every " + interval + "s):");
+    if (auto_citizen_level >= 0) {
+      set_auto_peasant_level(auto_citizen_level);
+      print_game_msg("- Auto Citizen: build and gather automation forced on");
+    }
     if (citizen_idle_threshold > 0) {
       print_game_msg("- Citizens: batch of " + citizen_batch + " while fewer than " + citizen_idle_threshold + " idle");
     }

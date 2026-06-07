@@ -27,7 +27,7 @@
     <UNIT_DEFENSIVE_RESPOND_RANGE value="4 tiles (This seems to keep people from blindly wandering into as many forts, while still letting the melee units respond reasonably)"/>
     <SHIP_DEFENSIVE_RESPOND_RANGE value="8 tiles (Ships need a better respond range so fire ships won't just sit there)"/>
     <UNIT_GUARD_RESPOND_RANGE value="8 tiles (BR 1/16/2003 -- figured this should be smaller than 12)"/>
-    <UNIT_BUILD_RESPOND_RANGE value="12 tiles"/>
+    <UNIT_BUILD_RESPOND_RANGE value="20 tiles"/>
     <UNIT_GATHER_RESPOND_RANGE value="32 tiles"/>
     <AIRCRAFT_RESPOND_RANGE value="10 tiles (BR 1/16/2003 -- made this smaller so that planes don't go wandering all over the place into air defenses)"/>
     <BOMBER_RESPOND_RANGE value="12 tiles "/>
@@ -667,7 +667,7 @@
     <FORT_GARRISON_UPGRADE value="5"/>
     <UNIT_HEAL_RATE entry0="20 frames" entry1="15 frames" entry2="10 frames" entry3="5 frames"/>
     <SUPPLY_HEAL_RATE value="0 frames (0 means don't heal at all)"/>
-    <CIVILIAN_HEAL_RATE value="45 frames (0 means don't heal at all)"/>
+    <CIVILIAN_HEAL_RATE value="20 frames (0 means don't heal at all)"/>
     <AIRCRAFT_HEAL_RATE entry0="20 frames" entry1="16 frames" entry2="12 frames" entry3="8 frames"/>
     <CITY_HEAL_RATE value="4 frames"/>
     <BOMBING_MANA_COST value="0 mana"/>

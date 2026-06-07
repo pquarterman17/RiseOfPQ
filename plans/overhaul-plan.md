@@ -6,7 +6,7 @@ Gameplay/balance overhaul for Rise of Nations: Extended Edition targeting slower
 **Created:** 2026-06-07
 **Updated:** 2026-06-07
 
-> Items 1–3, 8, 11, and 12 are implemented and deployed but **await in-game verification** — their checkboxes stay open until a test game confirms them.
+> Items 1–3, 8, and 11–13 are implemented and deployed but **await in-game verification** — their checkboxes stay open until a test game confirms them.
 
 ---
 
@@ -76,6 +76,13 @@ game loads mod file INSTEAD of Data\<file>.xml
    - [x] deploy.ps1 extended to install standalone scripts
    - [ ] In-game verification: select script in game setup, confirm citizens auto-queue and messages print
    - [ ] Tune defaults (interval, batch) after first playtest
+
+13. **Citizen automation & resilience** — force engine Auto Citizen "Build and Gather" via `set_auto_peasant_level(1)` in Auto_Train; `rules.xml`: `UNIT_BUILD_RESPOND_RANGE` 12→20 tiles, `CIVILIAN_HEAL_RATE` 45→20 frames
+   - [x] set_auto_peasant_level(1) in run_once (config: auto_citizen_level, -1 = leave profile setting)
+   - [x] Build/repair respond range raised
+   - [x] Civilian self-heal rate ~2× faster
+   - [ ] In-game verification: idle citizens auto-repair a damaged building without orders
+   - [ ] Manual once: set Options → Auto Citizen Delay slider to minimum (stored in binary profile, not moddable)
 
 5. **Late-game unit economy** — raise `COST`/`SUPPORT` ramps for Industrial+ units in `unitrules.xml` so late armies are investments, not spam
 
